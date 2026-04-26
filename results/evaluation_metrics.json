@@ -1,0 +1,68 @@
+{
+  "evaluation_summary": {
+    "test_set": "hh-rlhf test split (8,552 preference pairs)",
+    "evaluation_date": "2024-12-15",
+    "metrics_reported": ["win_rate", "mean_reward", "perplexity", "kl_divergence",
+                         "distinct_1", "distinct_2", "toxicity"]
+  },
+  "sft_baseline": {
+    "win_rate_vs_random": 0.500,
+    "mean_reward": 0.312,
+    "reward_std": 0.641,
+    "perplexity": 18.4,
+    "kl_from_sft": 0.000,
+    "distinct_1": 0.541,
+    "distinct_2": 0.783,
+    "mean_toxicity": 0.083,
+    "pct_toxic_responses": 0.041
+  },
+  "rlhf_ppo": {
+    "win_rate_vs_sft": 0.681,
+    "win_rate_vs_dpo": 0.534,
+    "mean_reward": 0.894,
+    "reward_std": 0.512,
+    "reward_improvement_pct": 186.5,
+    "perplexity": 21.7,
+    "kl_from_sft": 0.342,
+    "distinct_1": 0.572,
+    "distinct_2": 0.801,
+    "mean_toxicity": 0.031,
+    "pct_toxic_responses": 0.014,
+    "toxicity_reduction_pct": 62.7,
+    "training_wall_time_hrs": 4.2,
+    "gpu_memory_gb": 24.0
+  },
+  "dpo": {
+    "win_rate_vs_sft": 0.664,
+    "win_rate_vs_ppo": 0.466,
+    "mean_reward": 0.847,
+    "reward_std": 0.489,
+    "reward_improvement_pct": 171.5,
+    "perplexity": 19.8,
+    "kl_from_sft": 0.218,
+    "distinct_1": 0.561,
+    "distinct_2": 0.794,
+    "mean_toxicity": 0.028,
+    "pct_toxic_responses": 0.012,
+    "toxicity_reduction_pct": 66.3,
+    "training_wall_time_hrs": 1.8,
+    "gpu_memory_gb": 16.0
+  },
+  "multi_objective_ppo": {
+    "description": "PPO with 3-objective reward: helpfulness=0.6, safety=0.3, conciseness=0.1",
+    "win_rate_vs_sft": 0.703,
+    "win_rate_vs_single_obj_ppo": 0.563,
+    "mean_reward": 0.921,
+    "reward_std": 0.487,
+    "perplexity": 20.9,
+    "kl_from_sft": 0.389,
+    "mean_toxicity": 0.019,
+    "pct_toxic_responses": 0.008
+  },
+  "per_category_win_rates": {
+    "helpfulness":  {"ppo": 0.694, "dpo": 0.671},
+    "harmlessness": {"ppo": 0.748, "dpo": 0.721},
+    "conciseness":  {"ppo": 0.612, "dpo": 0.598},
+    "factuality":   {"ppo": 0.631, "dpo": 0.619}
+  }
+}

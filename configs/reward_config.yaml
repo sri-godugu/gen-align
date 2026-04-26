@@ -1,0 +1,20 @@
+model:
+  vocab_size:   50257
+  max_seq_len:  512
+  hidden_size:  768
+  n_layers:     12
+  n_heads:      12
+  mlp_ratio:    4.0
+  dropout:      0.1
+
+data:
+  train_path: data/preference_train.jsonl
+  eval_path:  data/preference_eval.jsonl
+
+training:
+  batch_size:    16
+  max_steps:     5000
+  learning_rate: 1.0e-4
+  log_every:     100
+  eval_every:    500
+  grad_clip:     1.0

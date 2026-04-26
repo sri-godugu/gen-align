@@ -1,0 +1,19 @@
+jax>=0.4.20
+jaxlib>=0.4.20
+flax>=0.8.0
+optax>=0.2.0
+numpy>=1.24.0
+datasets>=2.14.0
+transformers>=4.35.0
+tokenizers>=0.15.0
+scipy>=1.11.0
+matplotlib>=3.7.0
+pyyaml>=6.0.1
+tqdm>=4.66.0
+pytest>=7.4.0
+
+# Optional — install for neural toxicity scoring
+# detoxify>=0.5.1
+
+# Optional — install for experiment tracking
+# wandb>=0.16.0

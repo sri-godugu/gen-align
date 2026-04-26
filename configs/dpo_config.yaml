@@ -1,0 +1,21 @@
+model:
+  vocab_size:   50257
+  max_seq_len:  512
+  hidden_size:  768
+  n_layers:     12
+  n_heads:      12
+  mlp_ratio:    4.0
+  dropout:      0.1
+
+data:
+  train_path: data/preference_train.jsonl
+  eval_path:  data/preference_eval.jsonl
+
+training:
+  beta:          0.1      # KL regularisation strength
+  batch_size:    8
+  max_steps:     5000
+  learning_rate: 5.0e-5
+  weight_decay:  0.01
+  log_every:     50
+  eval_every:    500
