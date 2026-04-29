@@ -22,12 +22,12 @@ from src.utils.visualization import plot_training_curves
 
 
 def parse_args():
-    p = argparse.ArgumentParser()
-    p.add_argument('--config',        default='configs/ppo_config.yaml')
-    p.add_argument('--ref_params',    default='outputs/sft/sft_params.pkl')
-    p.add_argument('--reward_params', default='outputs/reward_model/reward_params.pkl')
-    p.add_argument('--output_dir',    default='outputs/ppo')
-    return p.parse_args()
+    args = argparse.ArgumentParser()
+    args.add_argument('--config',        default='configs/ppo_config.yaml')
+    args.add_argument('--ref_params',    default='outputs/sft/sft_params.pkl')
+    args.add_argument('--reward_params', default='outputs/reward_model/reward_params.pkl')
+    args.add_argument('--output_dir',    default='outputs/ppo')
+    return args.parse_args()
 
 
 def main():
