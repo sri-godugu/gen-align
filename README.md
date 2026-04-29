@@ -19,7 +19,7 @@ All components are implemented in **JAX + Flax** for hardware-accelerated traini
 
 ---
 
-## Results
+## Results  
 
 ### RLHF/PPO vs DPO on Anthropic/hh-rlhf
 
